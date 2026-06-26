@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:prototype/home_screen.dart';
+import 'package:get/get.dart';
+import 'package:prototype/bindings/counter_binding.dart';
+import 'package:prototype/bindings/post_binding.dart';
+import 'package:prototype/get%20pages/pages.dart';
+import 'package:prototype/pages/counter.dart';
+import 'package:prototype/pages/posts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,9 +21,12 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
 
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      initialRoute: '/posts',
+      initialBinding: PostBinding(),
+      getPages: Pages().getAllPages(),
+      home: Posts(),
     );
   }
 }
