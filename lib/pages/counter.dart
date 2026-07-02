@@ -8,14 +8,12 @@ class Counter extends GetView<CounterController> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       floatingActionButton: FloatingActionButton(
+        onPressed: () => controller.increment(),
         child: Icon(CupertinoIcons.add),
-        onPressed: () {
-          controller.increment();
-        },
       ),
-      appBar: AppBar(title: Text('GetX'), centerTitle: true),
       body: Center(
         child: Obx(
           () => Text(

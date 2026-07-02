@@ -23,7 +23,7 @@ class _MyAppState extends State<MyApp> {
 
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/posts',
+      initialRoute: '/post',
       initialBinding: PostBinding(),
       getPages: Pages().getAllPages(),
       home: Posts(),
